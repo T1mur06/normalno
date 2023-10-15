@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let obj = {
+            surname: "Рыскужин" , 
+            name:"Тимур" ,
+            patronymic: "Ирекович" ,
+            ocupation: "Президнт",
+            degree: "среднее профессиональное",
+            category: "первая",
+            education: "Многопрофильный колледж при МГТУ им. Г.И. Носова",
+            descip: [
+                "Информатика",
+                "Переговоры",
+                "Умение тратить гос бюджет",
+                ],
+            note: "Владыка мира"
+        }
+        let line = `
+        <h2> ${obj.surname} ${obj.name} ${obj.patronymic}  </h2>
+        <p> <i>Фамилия: </i>  ${obj.surname} </p>
+        <p> <i>Имя: </i>  ${obj.name} </p>
+        <p> <i>Отчество: </i>  ${obj.patronymic} </p>
+        <p> <i>Должность:</i> ${obj.ocupation} </p>
+        <p> <i>Образование: </i>  ${obj.degree} </p>
+        <p> <i>Категория: </i>  ${obj.category} </p>
+        <p> <i>Место работы: </i>  ${obj.education} </p>
+        <p> <i>Дисциплина: </i> <br>
+
+          <ul>
+           <li> ${obj.descip[0]}</li> <br> 
+           <li> ${obj.descip[1]}</li>   <br>
+           <li> ${obj.descip[2]} </li>  <br>
+
+          </ul>
+        <p> <i>Дополнение: </i>  ${obj.note} </p>
+        `;
+    </script>
+</head>
+<body>
+    <header>
+        <h1 align="center">Введение в JavaScript</h1>
+      </header>
+  
+      <div class="content">
+        <script>
+          document.write(line);
+        </script>
+      </div>
+  
+      <footer align="center"></footer>
+</body>
+</html>

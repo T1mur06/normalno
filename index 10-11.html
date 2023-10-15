@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let person = {
+			surname: 'Карамзин',
+			name: 'Виктор',
+			patronymic: 'Геннадьевич',
+			ocupation: 'Преподаватель специальных дисциплин.',
+			degree: 'Высшее.',
+			category: 'Первая.',
+			education: ['Московский государственный институт электронной техники,',  ],
+			discipline: ['Информатика;', 'Основы программирования;', 'Инженерная графика.'],
+			note: 'Хочу в дом к Анджлине Джоли'
+		};
+    </script>
+</head>
+<body>
+    <script>
+       document.write (
+				'<p>', '<h2>', person.surname + ' ' + person.name + ' ' + person.patronymic, '</h2>', '</p>' +
+				'<p>', '<i>Должность:</i>' + ' ' + person.ocupation, '</p>' +
+				'<p>', '<i>Уровень образования:</i>' + ' ' + person.degree, '</p>' +
+				'<p>', '<i>Категория:</i>' + ' ' + person.category, '</p>' +
+				'<p>', '<i>Образование:</i>' + ' ' + person.education[0] + ' ' + person.education[1], '</p>' +
+				'<p>', '<i>Дисциплины:</i>' + ' ' + 
+				'<ul>', '<li>', person.discipline[0], '</li>' + '<li>', person.discipline[1], '</li>' + '<li>', teacher.discipline[2], '</li>', '</ul>', '</p>' +
+				'<p>', '<i>Примечание:</i>' + ' ' + person.note, '</p>'
+			);
+				let line = `
+				<h2> ${person.surname} ${person.name} ${person.patronymic} </h2>
+				<p><i>Должность:</i> ${person.ocupation}</p>
+				<p><i>Уровень образования:</i> ${person.degree}</p>
+				<p><i>Категория:</i> ${person.category}</p>
+				<p><i>Образование:</i> ${person.education[0]} ${person.education[1]}</p>
+				<p><i>Дисциплины:</i> <ul><li>${person.discipline[0]}</li> <li>${person.discipline[1]}</li> <li>${teacher.discipline[2]}</li></ul></p>
+				<p><i>Примечание:</i> ${person.note}</p>`;
+				document.write(line);
+    </script>
+</body>
+</html>
